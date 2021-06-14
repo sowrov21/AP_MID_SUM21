@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+}
+<h4 style="color:greenyellow">Login Success..</h4>
+@if(Session["username"]!=null)
+            {
+                <p>Welcome <b>@Session["username"]</b> </p>
+            }
+
+<hr />
+<h6>Dashboard</h6>
+
+<a href="/Students/PopulateTable">All Students</a>
+<a href="/Students/Create">Add Student</a>
+
+
+
