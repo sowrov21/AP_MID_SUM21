@@ -5,8 +5,6 @@
     ViewBag.Title = "Edit";
 }
 
-<h2>Edit</h2>
-
 <style>
 
     .center_div {
@@ -45,11 +43,11 @@
         </div>
         <div class="form-group">
             <label>Credit</label>
-            <input type="text" class="form-control" name="Credit" value="@Model.Student.Credit" placeholder="100">
+            <input type="number" class="form-control" name="Credit" value="@Model.Student.Credit" placeholder="100">
         </div>
         <div class="form-group">
             <label>CGPA</label>
-            <input type="text" class="form-control" name="CGPA" value="@Model.Student.CGPA" placeholder="4.00">
+            <input type="number" class="form-control" name="CGPA" value="@Model.Student.CGPA" placeholder="4.00">
         </div>
 
         <div class="form-group">

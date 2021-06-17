@@ -10,20 +10,21 @@ namespace LabCRUDTask.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Please provide the name field")]
+        [Required(ErrorMessage = "Please  provide provide the name field")]
         public string Name { get; set; }
         
-        [Required(ErrorMessage = "Please the Date Of Birth field")]
+        [Required(ErrorMessage = "Please provide the Date Of Birth field")]
         public DateTime DOB { get; set; }
 
         [Required(ErrorMessage = "Please provide the credit field")]
+        [Range(1, 148, ErrorMessage = "Please enter correct value. Range 1 to 148")]
         public int Credit { get; set; }
 
         [Required(ErrorMessage = "Please provide the CGPA field")]
         [Range(1.00,4.00, ErrorMessage = "Please enter correct value. Range 1.00 to 4.00")]
         public double CGPA { get; set; }
 
-        [Required(ErrorMessage = "Please the Department field")]
+        [Range(1, Double.PositiveInfinity, ErrorMessage = "Department Required")]
         public int Dept_id { get; set; }
 
     }
