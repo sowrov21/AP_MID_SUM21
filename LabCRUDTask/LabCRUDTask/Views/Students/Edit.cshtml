@@ -1,4 +1,6 @@
-﻿@model LabCRUDTask.Models.Student
+﻿@*@model LabCRUDTask.Models.Student*@
+
+@model LabCRUDTask.Models.ViewModel.StudentDepartmentVM
 @{
     ViewBag.Title = "Edit";
 }
@@ -18,34 +20,42 @@
     <h3>@ViewBag.Message</h3>
     <form action="/Students/Create" method="post">
 
-        <input type="hidden" name="Id" value="@Model.Id">
+        <input type="hidden" name="Id" value="@Model.Student.Id">
         <div class="form-group">
             <label>Name</label>
-            <input type="text" class="form-control" name="Name" value="@Model.Name" placeholder="Enter student name">
+            <input type="text" class="form-control" name="Name" value="@Model.Student.Name" placeholder="Enter student name">
         </div>
 
         <div class="form-group">
             <label>Department</label>
             <select class="form-control" name="Dept_id">
-                <option value="@Model.Dept_id" selected></option>
-                <option value="1">CSE</option>
-                <option value="2">EEE</option>
-                <option value="3">BBA</option>
+                @foreach (var dept in @Model.Departments)
+                             
+                            {
+                         <option 
+                            value="@dept.Id"
+                     
+                                @(Model.Student.Dept_id ==dept.Id ? "selected" : "") 
+                            
+                            
+                             >@dept.Name</option>
+                            }
+                            
             </select>
         </div>
         <div class="form-group">
             <label>Credit</label>
-            <input type="text" class="form-control" name="Credit" value="@Model.Credit" placeholder="100">
+            <input type="text" class="form-control" name="Credit" value="@Model.Student.Credit" placeholder="100">
         </div>
         <div class="form-group">
             <label>CGPA</label>
-            <input type="text" class="form-control" name="CGPA" value="@Model.CGPA" placeholder="4.00">
+            <input type="text" class="form-control" name="CGPA" value="@Model.Student.CGPA" placeholder="4.00">
         </div>
 
         <div class="form-group">
             <label>Date Of Birth</label>
             <div class='input-group date' id='datetimepicker1'>
-                <input type='text' class="form-control" name="DOB" value="@Model.DOB" />
+                <input type='text' class="form-control" name="DOB" value="@Model.Student.DOB" />
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar"></span>
                 </span>

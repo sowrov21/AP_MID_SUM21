@@ -1,4 +1,4 @@
-﻿@model LabCRUDTask.Models.Student
+﻿@model LabCRUDTask.Models.ViewModel.StudentDepartmentVM
 @{
     ViewBag.Title = "Create";
 }
@@ -11,40 +11,50 @@
     }
 </style>
 
+
+
 <div class=" container center_div">
-    <h2>Register New Student</h2>
+
     <form action="/Students/Create" method="post">
+        <h2>Register New Student</h2>
         <div class="form-group">
             <label>Name</label>
-            <input type="text" class="form-control" name="Name" placeholder="Enter student name">
-            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            <input type="text" class="form-control" name="Name" value="@Model.Student.Name" placeholder="Enter student name">
+            @Html.ValidationMessage("Name", htmlAttributes: new { @class = "text-danger" })
+
         </div>
 
         <div class="form-group">
             <label>Department</label>
+
+
             <select class="form-control" name="Dept_id">
-                <option value="" style="display: none" selected>Choose Department</option>
-                <option value="1">CSE</option>
-                <option value="2">EEE</option>
-                <option value="3">BBA</option>
+                <option value="null" style="display: none" selected disabled>Choose Department</option>
+                @foreach (var dept in Model.Departments)
+                {
+                    <option value="@dept.Id">
+                        @dept.Name
+                    </option>
+                }
             </select>
+
         </div>
         <div class="form-group">
             <label>Credit</label>
-            <input type="text" class="form-control" name="Credit" placeholder="100">
-            @Html.ValidationMessageFor(model => model.Credit, "", new { @class = "text-danger" })
+            <input type="text" class="form-control" name="Credit" value="@Model.Student.Credit" placeholder="100">
+            @Html.ValidationMessage("Credit", htmlAttributes: new { @class = "text-danger" })
         </div>
         <div class="form-group">
             <label>CGPA</label>
-            <input type="text" class="form-control" name="CGPA" placeholder="4.00">
-            @Html.ValidationMessageFor(model => model.CGPA, "", new { @class = "text-danger" })
+            <input type="text" class="form-control" name="CGPA" value="@Model.Student.CGPA" placeholder="4.00">
+            @Html.ValidationMessage("CGPA", htmlAttributes: new { @class = "text-danger" })
         </div>
 
         <div class="form-group">
             <label>Date Of Birth</label>
             <div class='input-group date' id='datetimepicker1'>
                 <input type='text' class="form-control" name="DOB" />
-                @Html.ValidationMessageFor(model => model.DOB, "", new { @class = "text-danger" })
+                @Html.ValidationMessage("DOB", htmlAttributes: new { @class = "text-danger" })
                 <span class="input-group-addon">
                     <span class="glyphicon glyphicon-calendar"></span>
                 </span>
@@ -53,9 +63,21 @@
 
 
         <button type="submit" class="btn btn-primary">Add</button>
+
     </form>
 
 </div>
+
+@*@if (ViewBag.Msg != null)
+{
+    <script type="text/javascript">
+                    window.onsubmit = function()
+                    {
+                        alert("@ViewBag.Msg");
+                    }
+    </script>
+}*@
+
 
 @section Scripts
 {
@@ -73,4 +95,5 @@
             });
         });
     </script>
+
 }
