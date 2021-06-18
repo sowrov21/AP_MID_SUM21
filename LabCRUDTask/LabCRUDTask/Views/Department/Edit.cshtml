@@ -1,0 +1,28 @@
+﻿@model LabCRUDTask.Models.Department
+@{
+    ViewBag.Title = "Edit";
+}
+
+<style>
+
+    .center_div {
+        margin: 0 auto;
+        width: 40% /* value of your choice which suits your alignment */
+    }
+</style>
+
+<div class=" container center_div">
+    <h2>Edit New Department</h2>
+    <form action="/Department/Edit" method="post">
+
+        <input type="hidden" name="Id" value="@Model.Id">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" name="Name" value="@Model.Name" placeholder="Enter student name">
+        </div>
+        <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+
+</div>
+
+
