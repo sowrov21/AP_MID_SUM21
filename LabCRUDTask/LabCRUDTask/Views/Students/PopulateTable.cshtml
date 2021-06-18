@@ -45,13 +45,13 @@
 
                 </td>
                 <td>
-                    <a class="btn btn-success" href="/Students/Edit/@item.Id"><i class="far fa-edit"></i></a> &nbsp;|
+                    <a class="btn btn-success" href="/Students/Edit/@item.Id" data-toggle="tooltip" data-placement="top" title="Edit"><i class="far fa-edit"></i></a> &nbsp;|
 
                     <form method="post" id="delete-form-@item.Id" action="/Students/Delete/@item.Id" style="display: none;">
                     </form>
-                    <a class="btn btn-danger" onclick="deleteFunc(@item.Id)"> <i class="fas fa-trash-alt"></i> </a>&nbsp;|
+                    <a class="btn btn-danger" onclick="deleteFunc(@item.Id)" data-toggle="tooltip" data-placement="top" title="Delete"> <i class="fas fa-trash-alt"></i> </a>&nbsp;|
 
-                    <a class="btn btn-primary" href="#"><i class="fas fa-eye"></i></a>
+                    <a class="btn btn-primary" href="/Students/Details/@item.Id"  data-toggle="tooltip" data-placement="top" title="Details"><i class="fas fa-eye"></i></a>
 
                 </td>
             </tr>

@@ -1,0 +1,63 @@
+﻿@model LabCRUDTask.Models.ViewModel.StudentDepartmentVM
+
+
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12">
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h3 class="card-title"> Information of <b style="color:orangered">@Model.Student.Name</b></h3>
+                        </div>
+
+                    </div>
+
+                    <div class="card-body p-0" style="width:40%">
+                        <table class="table table-striped">
+                            <tbody>
+                                <tr>
+                                    <th style="width: 50px">Id</th>
+                                    <td>@Model.Student.Id</td>
+                                </tr>
+                                <tr>
+                                    <th style="width: 50px">Name</th>
+                                    <td>@Model.Student.Name</td>
+                                </tr>
+                                <tr>
+                                    <th style="width: 50px">Date of Birth</th>
+                                    <td>@Model.Student.DOB.ToShortDateString()</td>
+                                </tr>
+                                <tr>
+                                    <th style="width: 50px">Credit</th>
+                                    <td>@Model.Student.Credit</td>
+                                </tr>
+                                <tr>
+                                    <th style="width: 50px">CGPA</th>
+                                    <td>@Model.Student.CGPA</td>
+                                </tr>
+                                <tr>
+                                    <th style="width: 50px">Department</th>
+                                    <td>
+                                        @foreach (var dept in @Model.Departments)
+                                        {
+
+                                            @(Model.Student.Dept_id == dept.Id ? @dept.Name : "")
+
+
+                                        }
+                                    </td>
+                                </tr>
+                            </tbody>
+
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+</div>
+
+

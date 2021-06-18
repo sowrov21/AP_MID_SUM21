@@ -78,7 +78,7 @@ namespace LabCRUDTask.Controllers
              comboData.Departments = db.Departments.FetchAll();
 
             return View(comboData);
-        }
+        }   
 
         [HttpPost]
         public ActionResult Edit(Student std)
@@ -97,6 +97,19 @@ namespace LabCRUDTask.Controllers
             return RedirectToAction("PopulateTable");
 
         }
+
+        public ActionResult Details(int id)
+        {
+            //ViewModel
+            StudentDepartmentVM comboData = new StudentDepartmentVM();
+            Database db = new Database();
+            comboData.Student = db.Students.Get(id);
+            comboData.StudentsList = db.Students.FetchAll();
+            comboData.Departments = db.Departments.FetchAll();
+
+            return View(comboData);
+        }
+
 
     }
 }

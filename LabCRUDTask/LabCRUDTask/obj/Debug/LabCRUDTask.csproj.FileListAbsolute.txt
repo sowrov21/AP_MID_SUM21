@@ -234,3 +234,4 @@ C:\Users\Mohammad Sowrov\source\repos\Lab Task\GitHub Uploaded 2\AP_MID_SUM21\La
 C:\Users\Mohammad Sowrov\source\repos\Lab Task\GitHub Uploaded 2\AP_MID_SUM21\LabCRUDTask\LabCRUDTask\obj\Debug\LabCRUDTask.csproj.CopyComplete
 C:\Users\Mohammad Sowrov\source\repos\Lab Task\GitHub Uploaded 2\AP_MID_SUM21\LabCRUDTask\LabCRUDTask\obj\Debug\LabCRUDTask.dll
 C:\Users\Mohammad Sowrov\source\repos\Lab Task\GitHub Uploaded 2\AP_MID_SUM21\LabCRUDTask\LabCRUDTask\obj\Debug\LabCRUDTask.pdb
+C:\Users\Mohammad Sowrov\source\repos\Lab Task\GitHub Uploaded 2\AP_MID_SUM21\LabCRUDTask\LabCRUDTask\obj\Debug\LabCRUDTask.csprojAssemblyReference.cache
