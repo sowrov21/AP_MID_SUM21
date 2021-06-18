@@ -120,6 +120,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\DashboardController.cs" />
     <Compile Include="Controllers\DepartmentController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -172,7 +173,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Login\Dashboard.cshtml" />
     <Content Include="Views\Students\Create.cshtml" />
     <Content Include="Views\Students\PopulateTable.cshtml" />
     <Content Include="Views\Students\Edit.cshtml" />
@@ -180,6 +180,8 @@
     <Content Include="Views\Department\Create.cshtml" />
     <Content Include="Views\Department\Index.cshtml" />
     <Content Include="Views\Department\Edit.cshtml" />
+    <Content Include="Views\Shared\_DashboardLayout.cshtml" />
+    <Content Include="Views\Dashboard\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

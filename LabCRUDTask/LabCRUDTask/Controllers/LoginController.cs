@@ -35,7 +35,7 @@ namespace LabCRUDTask.Controllers
                 if (reader.Read())
                 {
                     Session["username"] = adm.Username.ToString();
-                    return RedirectToAction("Dashboard");
+                    return RedirectToAction("Index", "Dashboard");
                 }
                 else
                 {
@@ -44,13 +44,17 @@ namespace LabCRUDTask.Controllers
                 }
                 conn.Close();
             }
-                
+
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Logout()
+        {
+            Session.Abandon();
             return View();
         }
 
-        public ActionResult Dashboard()
-        {
-            return View();
-        }
-    }
+    }    
 }
+
+       

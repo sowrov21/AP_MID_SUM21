@@ -1,12 +1,11 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Dashboard";
 }
 <h4 style="color:greenyellow">Login Success..</h4>
-@if(Session["username"]!=null)
-            {
-                <h3>Welcome <b>@Session["username"]</b> </h3>
-            }
+@if (Session["username"] != null)
+{
+    <h3>Welcome <b>@Session["username"]</b> </h3>
+}
 
 <hr />
 <h2>Dashboard</h2>
@@ -15,6 +14,3 @@
 <a class="btn btn-info" href="/Students/Create">Add Student</a>
 <a class="btn btn-danger" href="/Department/Index" target="_blank">All Departments</a>
 <a class="btn btn-default" href="#">Add Department</a>
-
-
-
