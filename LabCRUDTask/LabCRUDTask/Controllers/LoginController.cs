@@ -51,7 +51,7 @@ namespace LabCRUDTask.Controllers
         public ActionResult Logout()
         {
             Session.Abandon();
-            return View();
+            return RedirectToAction("Index");
         }
 
     }    

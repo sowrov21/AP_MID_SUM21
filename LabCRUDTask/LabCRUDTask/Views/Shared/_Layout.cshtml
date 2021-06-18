@@ -25,7 +25,17 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Login", "Index", "Login")</li>
+
+                    @if (!HttpContext.Current.Session.SessionID.IsBool())
+                    {
+                        <li>@Html.ActionLink("Login", "Index", "Login")</li>
+                    }
+                    else
+                   {
+                        <li>@Html.ActionLink("Dashboard", "Index", "Dashboard")</li>
+                   }
+
+
 
                 </ul>
             </div>

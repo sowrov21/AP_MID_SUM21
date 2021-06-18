@@ -1,14 +1,17 @@
 ﻿using DatabaseCRUD.Models.Database;
 using LabCRUDTask.Models;
 using LabCRUDTask.Models.ViewModel;
+using LabCRUDTask.Filter;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+
 namespace LabCRUDTask.Controllers
 {
+    [CustomSessionCheck]
     public class StudentsController : Controller
     {
         // GET: Students
@@ -16,6 +19,7 @@ namespace LabCRUDTask.Controllers
         {
             return View();
         }
+
         public ActionResult Create()
         {
             /* Student st = new Student();
