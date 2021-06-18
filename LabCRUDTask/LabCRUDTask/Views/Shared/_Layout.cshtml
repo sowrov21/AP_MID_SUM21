@@ -26,7 +26,7 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
 
-                    @if (!HttpContext.Current.Session.SessionID.IsBool())
+                    @if (HttpContext.Current.Session.IsNewSession)
                     {
                         <li>@Html.ActionLink("Login", "Index", "Login")</li>
                     }
