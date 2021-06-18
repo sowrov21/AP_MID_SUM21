@@ -31,7 +31,7 @@ namespace LabCRUDTask.Controllers
             {
                 Database db = new Database();
                 db.Departments.Insert(dpt); 
-                return RedirectToAction("Dashboard", "Login");
+                return RedirectToAction("Index");
             }
             return View();
         }
@@ -52,6 +52,16 @@ namespace LabCRUDTask.Controllers
             Database db = new Database();
             db.Departments.Update(dpt);
             return RedirectToAction("Index");
+        }
+
+
+        public ActionResult Delete(int id)
+        {
+
+            Database db = new Database();
+            db.Departments.Delete(id);
+            return RedirectToAction("Index");
+
         }
 
 

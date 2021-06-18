@@ -82,7 +82,7 @@ namespace LabCRUDTask.Controllers
             //update to db
             Database db = new Database();
             db.Students.Update(std);
-            return RedirectToAction("Index");
+            return RedirectToAction("PopulateTable");
         }
 
         public ActionResult Delete(int id)

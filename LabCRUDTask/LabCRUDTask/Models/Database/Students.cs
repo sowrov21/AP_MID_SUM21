@@ -81,8 +81,19 @@ namespace DatabaseCRUD.Models.Database
 
         public void Update(Student std)
         {
-            string query = $"Update students Set Name='{std.Name}', DOB={std.DOB} ,Credit={std.Credit}, CGPA='{std.CGPA}' Where Id = {std.Id}";
+            /*string query = $"Update students Set Name='{std.Name}', DOB='{std.DOB}' ,Credit={std.Credit}, CGPA={std.CGPA},Dept_id={std.Dept_id}  Where Id = {std.Id};";
             SqlCommand cmd = new SqlCommand(query, conn);
+            conn.Open();
+            cmd.ExecuteNonQuery();
+            conn.Close();*/
+
+            string query = $"Update Students set Name=@name, DOB=@dob ,Credit=@credit, CGPA=@cgpa,Dept_id=@dept_id Where Id ={std.Id}";
+            SqlCommand cmd = new SqlCommand(query, conn);
+            cmd.Parameters.AddWithValue("@name", std.Name);
+            cmd.Parameters.AddWithValue("@dept_id", std.Dept_id);
+            cmd.Parameters.AddWithValue("@credit", std.Credit);
+            cmd.Parameters.AddWithValue("@cgpa", std.CGPA);
+            cmd.Parameters.AddWithValue("@dob", std.DOB);
             conn.Open();
             cmd.ExecuteNonQuery();
             conn.Close();
