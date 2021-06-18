@@ -55,14 +55,6 @@ namespace LabCRUDTask.Controllers
         }
 
 
-        public ActionResult Delete(int id)
-        {
-
-            Database db = new Database();
-            db.Departments.Delete(id);
-            return RedirectToAction("Index");
-
-        }
 
 
 
