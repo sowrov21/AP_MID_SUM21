@@ -34,12 +34,13 @@ namespace LabCRUDTask.Controllers
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
+                    
                     Session["username"] = adm.Username.ToString();
                     return RedirectToAction("Index", "Dashboard");
                 }
                 else
                 {
-                    ViewBag.Message = "Username or Password not found";
+                    TempData["Message"] = "Username or Password didnot matched";
                     //return RedirectToAction("Index");
                 }
                 conn.Close();

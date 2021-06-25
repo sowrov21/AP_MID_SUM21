@@ -1,8 +1,6 @@
 ﻿@model LabCRUDTask.Models.Admin
 
-@{
-    ViewBag.Title = "Index";
-}
+
 
 @using (Html.BeginForm())
 {
@@ -37,10 +35,11 @@
             <input type="submit" value="Login" class="btn btn-default" />
         </div>
     </div>
-    
+    <h3>@ViewData["Message"]</h3>
 </div>
 }
-<h3 style="color:red">@Html.ViewBag.Message</h3>
+<h3 style="color:red">@TempData["Message"]</h3>
+
 <div>
     @Html.ActionLink("Back to Home", "Index","Home")
 </div>
