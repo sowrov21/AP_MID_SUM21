@@ -40,9 +40,9 @@
     
 </div>
 }
-<h3 style="color:red">@Html.ViewData["Message"]</h3>
+<h3 style="color:red">@Html.ViewBag.Message</h3>
 <div>
-    @Html.ActionLink("Back to Login", "Index")
+    @Html.ActionLink("Back to Home", "Index","Home")
 </div>
 
 @section Scripts {

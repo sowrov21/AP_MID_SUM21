@@ -39,7 +39,7 @@ namespace LabCRUDTask.Controllers
                 }
                 else
                 {
-                    ViewData["Message"] = "Username or Password not found";
+                    ViewBag.Message = "Username or Password not found";
                     //return RedirectToAction("Index");
                 }
                 conn.Close();
