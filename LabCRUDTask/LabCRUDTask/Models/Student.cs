@@ -10,7 +10,7 @@ namespace LabCRUDTask.Models
     {
         public int Id { get; set; }
 
-        [Required(ErrorMessage = "Please  provide provide the name field")]
+        [Required(ErrorMessage = "Please provide the Name field")]
         public string Name { get; set; }
         
         [Required(ErrorMessage = "Please provide the Date Of Birth field")]

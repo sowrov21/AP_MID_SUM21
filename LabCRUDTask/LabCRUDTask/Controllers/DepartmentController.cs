@@ -35,7 +35,8 @@ namespace LabCRUDTask.Controllers
                 db.Departments.Insert(dpt); 
                 return RedirectToAction("Index");
             }
-            return View();
+            Department dpt1 = new Department();
+            return View(dpt1);
         }
 
 
@@ -50,10 +51,17 @@ namespace LabCRUDTask.Controllers
         [HttpPost]
         public ActionResult Edit(Department dpt)
         {
-            //update to db
-            Database db = new Database();
-            db.Departments.Update(dpt);
-            return RedirectToAction("Index");
+            
+            if(ModelState.IsValid)
+            {
+                //update to db
+                Database db = new Database();
+                db.Departments.Update(dpt);
+                return RedirectToAction("Index");
+            }
+
+            Department dpt1 = new Department();
+            return View(dpt1);
         }
 
 

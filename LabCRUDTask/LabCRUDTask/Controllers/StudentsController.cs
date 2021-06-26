@@ -42,7 +42,6 @@ namespace LabCRUDTask.Controllers
             {
                 Database db = new Database();
                 db.Students.Insert(std);
-                //ViewBag.Msg = "Inserted Successfully..!";
                 return RedirectToAction("Dashboard", "Login");
             }
 
@@ -71,22 +70,32 @@ namespace LabCRUDTask.Controllers
         public ActionResult Edit(int id)
         {
             //ViewModel
-            StudentDepartmentVM comboData = new StudentDepartmentVM();
-            Database db = new Database();
-             comboData.Student = db.Students.Get(id);
-             comboData.StudentsList = db.Students.FetchAll();
-             comboData.Departments = db.Departments.FetchAll();
-
-            return View(comboData);
+                StudentDepartmentVM comboData = new StudentDepartmentVM();
+                Database db = new Database();
+                comboData.Student = db.Students.Get(id);
+                comboData.StudentsList = db.Students.FetchAll();
+                comboData.Departments = db.Departments.FetchAll();
+                return View(comboData);
         }   
 
         [HttpPost]
         public ActionResult Edit(Student std)
         {
-            //update to db
-            Database db = new Database();
-            db.Students.Update(std);
-            return RedirectToAction("PopulateTable");
+            if (ModelState.IsValid)
+            {
+                //update to db
+                Database db1 = new Database();
+                db1.Students.Update(std);
+                return RedirectToAction("PopulateTable");
+            }
+
+            Database dtb = new Database();
+            //ViewModel
+            StudentDepartmentVM comboData = new StudentDepartmentVM();
+            comboData.Student = std;
+            comboData.Departments = dtb.Departments.FetchAll();
+
+            return View(comboData);
         }
 
         public ActionResult Delete(int id)

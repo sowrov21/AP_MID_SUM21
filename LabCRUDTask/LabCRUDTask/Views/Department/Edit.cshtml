@@ -19,6 +19,7 @@
         <div class="form-group">
             <label>Name</label>
             <input type="text" class="form-control" name="Name" value="@Model.Name" placeholder="Enter student name">
+            @Html.ValidationMessage("Name", htmlAttributes: new { @class="text-danger" });
         </div>
         <button type="submit" class="btn btn-primary">Update</button>
     </form>

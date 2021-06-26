@@ -11,8 +11,6 @@
     }
 </style>
 
-
-
 <div class=" container center_div">
 
     <form action="/Students/Create" method="post">
@@ -70,14 +68,14 @@
 </div>
 
 @*@if (ViewBag.Msg != null)
-{
-    <script type="text/javascript">
-                    window.onsubmit = function()
-                    {
-                        alert("@ViewBag.Msg");
-                    }
-    </script>
-}*@
+    {
+        <script type="text/javascript">
+                        window.onsubmit = function()
+                        {
+                            alert("@ViewBag.Msg");
+                        }
+        </script>
+    }*@
 
 
 @section Scripts
