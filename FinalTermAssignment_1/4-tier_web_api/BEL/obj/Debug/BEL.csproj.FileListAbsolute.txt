@@ -1,0 +1,6 @@
+C:\Users\Mohammad Sowrov\source\repos\Final Term\HW\4-tier_web_api\BEL\bin\Debug\BEL.dll
+C:\Users\Mohammad Sowrov\source\repos\Final Term\HW\4-tier_web_api\BEL\bin\Debug\BEL.pdb
+C:\Users\Mohammad Sowrov\source\repos\Final Term\HW\4-tier_web_api\BEL\obj\Debug\BEL.csproj.AssemblyReference.cache
+C:\Users\Mohammad Sowrov\source\repos\Final Term\HW\4-tier_web_api\BEL\obj\Debug\BEL.csproj.CoreCompileInputs.cache
+C:\Users\Mohammad Sowrov\source\repos\Final Term\HW\4-tier_web_api\BEL\obj\Debug\BEL.dll
+C:\Users\Mohammad Sowrov\source\repos\Final Term\HW\4-tier_web_api\BEL\obj\Debug\BEL.pdb

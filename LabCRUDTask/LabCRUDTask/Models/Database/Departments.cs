@@ -73,6 +73,15 @@ namespace LabCRUDTask.Models.Database
             conn.Close();
         }
 
+        public void Delete(int id)
+        {
+                string query = $"Delete from Departments where Id={id}";
+                SqlCommand cmd = new SqlCommand(query, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+        }
+
 
     }
 }

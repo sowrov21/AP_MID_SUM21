@@ -64,6 +64,21 @@ namespace LabCRUDTask.Controllers
             return View(dpt1);
         }
 
+        public ActionResult Delete(int id)
+        {
+            try
+            {
+                Database db = new Database();
+                db.Departments.Delete(id);
+                return RedirectToAction("Index");
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
 
 
 
