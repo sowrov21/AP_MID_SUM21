@@ -1,0 +1,26 @@
+<div class="center">
+	<h1>Students Information</h1>
+	<table border="1" style="margin: 0 15%; width: 35%">
+		<tr>
+			<th>SL</th>
+			<th>Name</th>
+		</tr>
+		<tr ng-repeat="sn in stdName">
+			<td>{{$index}}</td>
+			<td>{{sn}}</td>
+		</tr>
+	</table>
+    <br>
+    <br>
+
+	<table border="2" style="border-collapse: collapse">
+		<tr>
+			<th>SL</th>
+			<th>First Name</th>
+		</tr>
+		<tr ng-repeat="so in studentObj">
+			<td>{{$index}}</td>
+			<td>{{so}}</td>
+		</tr>
+	</table>
+</div>
