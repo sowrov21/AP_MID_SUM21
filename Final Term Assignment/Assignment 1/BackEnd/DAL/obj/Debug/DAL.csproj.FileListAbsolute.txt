@@ -1,0 +1,12 @@
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\DAL\bin\Debug\DAL.dll.config
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\DAL\bin\Debug\DAL.dll
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\DAL\bin\Debug\DAL.pdb
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\DAL\obj\Debug\DAL.dll
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\DAL\obj\Debug\DAL.pdb

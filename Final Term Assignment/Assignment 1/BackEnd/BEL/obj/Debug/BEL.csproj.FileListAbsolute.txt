@@ -1,0 +1,6 @@
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\BEL\bin\Debug\BEL.dll
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\BEL\bin\Debug\BEL.pdb
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\BEL\obj\Debug\BEL.csproj.AssemblyReference.cache
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\BEL\obj\Debug\BEL.csproj.CoreCompileInputs.cache
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\BEL\obj\Debug\BEL.dll
+C:\Users\Mohammad Sowrov\source\repos\Git\AP_MID_SUM21\Final Term Assignment\Assignment 1\BackEnd\BEL\obj\Debug\BEL.pdb
