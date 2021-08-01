@@ -1,0 +1,120 @@
+<div class="container-fluid">
+	<div class="row bg-title">
+		<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+			<h4 class="page-title">Edit Product</h4>
+		</div>
+		<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+			<ol class="breadcrumb">
+				<li><a href="#">Dashboard</a></li>
+				<li class="active">Edit Product</li>
+			</ol>
+		</div>
+	</div>
+	<div class="col-md-8 col-xs-12">
+		<div class="white-box">
+			<form class="form-horizontal form-material">
+				<div class="form-group">
+					<label class="col-md-12">Name</label>
+					<div class="col-md-12">
+						<input
+							ng-model="pdt.Name"
+							type="text"
+							ng-value="product.Name"
+							placeholder="Toothpaste"
+							class="form-control form-control-line"
+							required
+						/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-12">Category</label>
+					<div class="col-sm-12">
+						<select
+							ng-model="pdt.Category_id"
+							class="form-control form-control-line"
+							required
+						>
+							<option ng-value="{{product.Category_id}}" style="display: none">
+								{{product.CategoryName}}
+							</option>
+
+							<option
+								ng-repeat=" ctg in categories"
+								ng-value="{{ctg.Id!=Category_id ? 'ctg.Id':''}}"
+							>
+								{{ctg.Name}}
+							</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="example-email" class="col-md-12">Price</label>
+					<div class="col-md-12">
+						<input
+							ng-model="pdt.Price"
+							type="text"
+							ng-value="product.Price"
+							placeholder="100"
+							class="form-control form-control-line"
+							id="example-email"
+							required
+						/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-12">Quantity</label>
+					<div class="col-md-12">
+						<input
+							ng-model="pdt.Quantity"
+							type="number"
+							ng-value="product.Quantity"
+							class="form-control form-control-line"
+							required
+						/>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-12">Status</label>
+					<div class="col-sm-12">
+						<select
+							
+							ng-model="p.Status"
+							class="form-control form-control-line"
+							required
+						>
+							<option value="{{p.Status}}" style="display: none">Select Status</option>
+
+							<option value="1">In Stoke</option>
+							<option value="0">Out of Stoke</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-md-12">Description</label>
+					<div class="col-md-12">
+						<textarea
+							ng-model="pdt.Description"
+							rows="5"
+							class="form-control form-control-line"
+							ng-value="product.Description"
+							required
+						></textarea>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-sm-12">
+						<input
+							type="submit"
+							ng-click="updateproduct()"
+							class="btn btn-success"
+							value="Update"
+						/>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<!-- /.container-fluid -->

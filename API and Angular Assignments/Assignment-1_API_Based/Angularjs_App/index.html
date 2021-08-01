@@ -1,0 +1,70 @@
+<head>
+    
+    <!--<link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">-->
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Invetory Management System</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="content/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Menu CSS -->
+    
+    <!-- animation CSS -->
+    <link href="content/css/animate.css" rel="stylesheet">
+    <link href="content/custom/products.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="content/css/style_admin.css" rel="stylesheet">
+    <!-- color CSS -->
+    <link href="content/css/colors/default.css" id="theme" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script href="content/bootstrap/js/modal.js"></script>
+
+	    <!--AngularJS Required Scripts-->
+		<script src="app/lib/angular.min.js"></script>
+		<script src="app/lib/angular.route.min.js"></script>
+		<script src="app/app.js"></script>
+</head>
+<body ng-app="myApp" class="fix-header">
+
+    
+    <!-- ============================================================== -->
+    <!-- Wrapper -->
+    <!-- ============================================================== -->
+    <div id="wrapper">
+			<!-- ============================================================== -->
+			 <!-- Topbar header - style you can find in pages.scss -->
+			   <!-- ============================================================== -->
+         	    <div ng-include="'views/inc/top_nav.html'"></div>
+			    <!-- End Top Navigation -->
+			  <!-- ============================================================== -->
+			<!-- Left Sidebar - style you can find in sidebar.scss  -->
+			  <!-- ============================================================== -->
+			    <div ng-include="'views/inc/side_nav.html'"></div>
+			  <!-- ============================================================== -->
+			<!-- End Left Sidebar -->
+			<!-- ============================================================== -->
+		     <!-- Page Content -->
+               <!-- ============================================================== -->
+				   <div id="page-wrapper">
+					
+					  <div ng-view> </div>
+						
+				   </div>
+                <!-- /.container-fluid -->
+           <div ng-include="'views/inc/footer.html'" ></div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Page Content -->
+        <!-- ============================================================== -->
+    </div>
+	
+    
+</body>
+
+</html>
+<!-- Add Services here -->
+<script src="app/services/ajax.js"></script>
+
+
+<!-- Add or Register Controllers here -->
+<script src="app/controllers/ProductContoller.js"></script>
+<script src="app/controllers/CategoryController.js"></script>

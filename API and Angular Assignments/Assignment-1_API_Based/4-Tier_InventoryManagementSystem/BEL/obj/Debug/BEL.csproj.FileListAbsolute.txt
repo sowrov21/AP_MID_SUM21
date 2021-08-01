@@ -1,0 +1,6 @@
+C:\Users\Mohammad Sowrov\source\repos\Final Term\HW\Lab Assignment\Assignment1\4-Tier_InventoryManagementSystem\BEL\bin\Debug\BEL.dll
+C:\Users\Mohammad Sowrov\source\repos\Final Term\HW\Lab Assignment\Assignment1\4-Tier_InventoryManagementSystem\BEL\bin\Debug\BEL.pdb
+C:\Users\Mohammad Sowrov\source\repos\Final Term\HW\Lab Assignment\Assignment1\4-Tier_InventoryManagementSystem\BEL\obj\Debug\BEL.csproj.AssemblyReference.cache
+C:\Users\Mohammad Sowrov\source\repos\Final Term\HW\Lab Assignment\Assignment1\4-Tier_InventoryManagementSystem\BEL\obj\Debug\BEL.csproj.CoreCompileInputs.cache
+C:\Users\Mohammad Sowrov\source\repos\Final Term\HW\Lab Assignment\Assignment1\4-Tier_InventoryManagementSystem\BEL\obj\Debug\BEL.dll
+C:\Users\Mohammad Sowrov\source\repos\Final Term\HW\Lab Assignment\Assignment1\4-Tier_InventoryManagementSystem\BEL\obj\Debug\BEL.pdb
