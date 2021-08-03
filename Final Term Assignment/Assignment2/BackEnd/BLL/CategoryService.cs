@@ -31,6 +31,12 @@ namespace BLL
             var mData = AutoMapper.Mapper.Map<CategoryModel, Category>(cm);
             CategoryRepo.AddCategory(mData);
         }
+
+        public static void EditCategory(CategoryModel cm)
+        {
+            var mData = AutoMapper.Mapper.Map<CategoryModel, Category>(cm);
+            CategoryRepo.EditCategory(mData);
+        }
         public static CategoryModel GetCategoryDetails(int id)
         {
             var data = CategoryRepo.GetCategoryDetails(id);

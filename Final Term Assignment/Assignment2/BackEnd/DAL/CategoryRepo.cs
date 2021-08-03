@@ -27,6 +27,13 @@ namespace DAL
             context.SaveChanges();
         }
 
+        public static void EditCategory(Category c)
+        {
+            var old_c = context.Categories.FirstOrDefault(x => x.Id == c.Id);
+            context.Entry(old_c).CurrentValues.SetValues(c);
+            context.SaveChanges();
+        }
+
         public static Category GetCategoryDetails(int id)
         {
             var data = context.Categories.FirstOrDefault(x => x.Id == id);

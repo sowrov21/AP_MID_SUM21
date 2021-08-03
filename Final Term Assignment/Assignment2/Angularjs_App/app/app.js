@@ -24,9 +24,21 @@ app.config([
 				templateUrl: "views/pages/editproduct.html",
 				controller: "EditProduct",
 			})
+			.when("/productdelete/:id", {
+				templateUrl: "views/pages/products.html",
+				controller: "ProductContoller",
+			})
 			.when("/categories", {
 				templateUrl: "views/pages/categories.html",
 				controller: "CategoryController",
+			})
+			.when("/addcategory", {
+				templateUrl: "views/pages/addcategory.html",
+				controller: "CategoryController",
+			})
+			.when("/categoryedit/:id", {
+				templateUrl: "views/pages/editcategory.html",
+				controller: "EditCategory",
 			})
 			.when("/orders", {
 				templateUrl: "views/pages/orders.html",
@@ -35,10 +47,6 @@ app.config([
 			.when("/orderdetail/:id", {
 				templateUrl: "views/pages/orderdetails.html",
 				controller: "GetOrderDetails",
-			})
-			.when("/addcategory", {
-				templateUrl: "views/pages/addcategory.html",
-				controller: "CategoryController",
 			})
 			.otherwise({
 				redirectTo: "/",

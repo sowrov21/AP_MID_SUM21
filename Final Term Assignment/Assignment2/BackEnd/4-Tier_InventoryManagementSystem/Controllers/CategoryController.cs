@@ -26,6 +26,13 @@ namespace _4_Tier_InventoryManagementSystem.Controllers
             CategoryService.AddCategory(cm);
         }
 
+        [Route("api/Category/Edit")]
+        [HttpPost]
+        public void Edit(CategoryModel cm)
+        {
+            CategoryService.EditCategory(cm);
+        }
+
         [Route("api/Category/{id}/Details")]
         [HttpGet]
         public CategoryModel GetProductDetails(int id)

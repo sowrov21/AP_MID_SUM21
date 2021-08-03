@@ -40,7 +40,7 @@ namespace _4_Tier_InventoryManagementSystem.Controllers
         }
 
         [Route("api/Product/{id}/Delete")]
-        [HttpPost]
+        [HttpGet]
         public void DeleteProduct(int id)
         {
             ProductService.DeleteProduct(id);

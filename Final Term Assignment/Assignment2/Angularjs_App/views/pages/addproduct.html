@@ -23,7 +23,7 @@
             <div class="form-group">
                 <label class="col-sm-12">Category</label>
                 <div class="col-sm-12">
-                    <select ng-init="p.Category_id='0'" ng-model="p.Category_id" class="form-control form-control-line" required>
+                    <select ng-init="p.CategoryId='0'" ng-model="p.CategoryId" class="form-control form-control-line" required>
                         <option value="0"  style="display: none;" >Select Category</option>
 
                         <option ng-repeat=" ctg in categories" value="{{ctg.Id}}"> {{ctg.Name}}</option>

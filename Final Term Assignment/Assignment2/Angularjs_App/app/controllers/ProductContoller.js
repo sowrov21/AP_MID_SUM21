@@ -45,23 +45,20 @@ app.controller("ProductContoller",function($scope,$http,ajax,$location,$routePar
       );
 
 
+     // Delete Product api/Product/{id}/Delete
 
-     // Edit Product
-     $scope.updateproduct = function (){
-
-      ajax.post(API_ROOT+"api/Product/Edit",pdt,
-        
-      function (response){
-        $location.path("/products");
-      },
-      function (error){
-
-      });
-
+     var id= $routeParams.id;
+     ajax.get(API_ROOT+"api/Product/"+id+"/Delete",
+       
+     function (response){
+       $scope.product=response.data;
+     },
+     function (error){
+ 
      }
+     );
 
 
-     // Delete Product
 
   
 });
@@ -104,9 +101,6 @@ app.controller("EditProduct",function($scope,$http,ajax,$location,$routeParams){
     });
 
    }
-
-
-
 
 
 });
