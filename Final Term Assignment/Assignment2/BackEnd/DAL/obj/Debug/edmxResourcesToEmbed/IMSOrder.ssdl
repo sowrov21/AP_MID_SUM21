@@ -25,7 +25,6 @@
     <Property Name="OrderDate" Type="date" Nullable="false" />
     <Property Name="OrderStatusId" Type="int" Nullable="false" />
     <Property Name="OrderTime" Type="time" Precision="0" />
-    <Property Name="Quantity" Type="int" />
   </EntityType>
   <EntityType Name="OrderStatuses">
     <Key>

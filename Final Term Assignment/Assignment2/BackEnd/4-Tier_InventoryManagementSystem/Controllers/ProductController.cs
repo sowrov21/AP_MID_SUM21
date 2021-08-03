@@ -22,6 +22,8 @@ namespace _4_Tier_InventoryManagementSystem.Controllers
         [HttpPost]
         public void Add(ProductModel pm)
         {
+            Random ran = new Random();
+            var id = ran.Next();
             ProductService.AddProduct(pm);
         }
 

@@ -26,7 +26,7 @@ app.config([
 			})
 			.when("/productdelete/:id", {
 				templateUrl: "views/pages/products.html",
-				controller: "ProductContoller",
+				controller: "DeleteProduct",
 			})
 			.when("/categories", {
 				templateUrl: "views/pages/categories.html",
@@ -43,6 +43,10 @@ app.config([
 			.when("/orders", {
 				templateUrl: "views/pages/orders.html",
 				controller: "GetAllOrder",
+			})
+			.when("/addorder", {
+				templateUrl: "views/pages/addorder.html",
+				controller: "AddOrders",
 			})
 			.when("/orderdetail/:id", {
 				templateUrl: "views/pages/orderdetails.html",

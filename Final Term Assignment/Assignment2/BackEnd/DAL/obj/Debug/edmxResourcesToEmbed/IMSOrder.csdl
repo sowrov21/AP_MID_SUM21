@@ -28,7 +28,6 @@
     <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="OrderStatusId" Type="Int32" Nullable="false" />
     <Property Name="OrderTime" Type="Time" Precision="0" />
-    <Property Name="Quantity" Type="Int32" />
     <NavigationProperty Name="OrderDetails" Relationship="Self.FK_OrderDetails_Orders" FromRole="Orders" ToRole="OrderDetails" />
     <NavigationProperty Name="OrderStatus" Relationship="Self.FK_Orders_OrderStatus" FromRole="Orders" ToRole="OrderStatuses" />
   </EntityType>

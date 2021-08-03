@@ -1,10 +1,7 @@
 app.controller("GetAllOrder", function ($scope, $http, ajax, $location) {
 	ajax.get(API_ROOT + "api/Order/GetAll", success, error);
 	function success(response) {
-		
 		$scope.orders = response.data;
-		
-
 	}
 	function error(error) {}
 });
@@ -24,10 +21,31 @@ app.controller(
 			$scope.total = 0;
 			$scope.order.OrderDetails.forEach((product) => {
 				$scope.total += product.ProductPrice * product.Quantity;
-				
 			});
 			$scope.total = $scope.total + 50;
 		}
 		function error(error) {}
 	}
 );
+
+app.controller("GetAllOrder", function ($scope, $http, ajax, $location) {
+	ajax.get(API_ROOT + "api/Order/GetAll", success, error);
+	function success(response) {
+		$scope.orders = response.data;
+	}
+	function error(error) {}
+});
+
+app.controller("AddOrders", function ($scope, $http, ajax, $location) {
+
+	ajax.get(API_ROOT+"api/Product/GetAll",success,error);
+    function success(response){
+      $scope.products=response.data;
+    }
+    function error(error){
+
+    }
+
+});
+
+

@@ -14,7 +14,6 @@ namespace BEL
         public DateTime OrderDate { get; set; }
         public int OrderStatusId { get; set; }
         public Nullable<System.TimeSpan> OrderTime { get; set; }
-        public int Quantity { get; set; }
 
 
     }

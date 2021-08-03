@@ -30,7 +30,6 @@
           <Property Name="OrderDate" Type="date" Nullable="false" />
           <Property Name="OrderStatusId" Type="int" Nullable="false" />
           <Property Name="OrderTime" Type="time" Precision="0" />
-          <Property Name="Quantity" Type="int" />
         </EntityType>
         <EntityType Name="OrderStatuses">
           <Key>
@@ -178,7 +177,6 @@
           <Property Name="OrderDate" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="OrderStatusId" Type="Int32" Nullable="false" />
           <Property Name="OrderTime" Type="Time" Precision="0" />
-          <Property Name="Quantity" Type="Int32" />
           <NavigationProperty Name="OrderDetails" Relationship="Self.FK_OrderDetails_Orders" FromRole="Orders" ToRole="OrderDetails" />
           <NavigationProperty Name="OrderStatus" Relationship="Self.FK_Orders_OrderStatus" FromRole="Orders" ToRole="OrderStatuses" />
         </EntityType>
@@ -330,7 +328,6 @@
                 <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
                 <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
                 <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
-                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

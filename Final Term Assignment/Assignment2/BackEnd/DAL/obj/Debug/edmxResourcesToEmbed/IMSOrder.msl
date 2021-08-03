@@ -27,7 +27,6 @@
           <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
           <ScalarProperty Name="OrderStatusId" ColumnName="OrderStatusId" />
           <ScalarProperty Name="OrderTime" ColumnName="OrderTime" />
-          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
