@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4d8e7865893f4a7f835f1e9c200c1b3d" Name="Diagram1">
+        <EntityTypeShape EntityType="IMSOrderModel.Category" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IMSOrderModel.OrderDetail" Width="1.5" PointX="5.25" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="IMSOrderModel.Order" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IMSOrderModel.OrderStatus" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="IMSOrderModel.Product" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="IMSOrderModel.sysdiagram" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="IMSOrderModel.User" Width="1.5" PointX="7.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="IMSOrderModel.FK_Products_Categories" ManuallyRouted="false" />
+        <AssociationConnector Association="IMSOrderModel.FK_OrderDetails_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="IMSOrderModel.FK_OrderDetails_Products" ManuallyRouted="false" />
+        <AssociationConnector Association="IMSOrderModel.FK_Orders_OrderStatus" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

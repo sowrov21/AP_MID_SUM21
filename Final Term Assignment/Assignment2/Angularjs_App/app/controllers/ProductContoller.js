@@ -49,7 +49,7 @@ app.controller("ProductContoller",function($scope,$http,ajax,$location,$routePar
      // Edit Product
      $scope.updateproduct = function (){
 
-      ajax.post(API_ROOT+"api/Product/Add",$scope.pdt,
+      ajax.post(API_ROOT+"api/Product/Edit",pdt,
         
       function (response){
         $location.path("/products");
@@ -65,3 +65,49 @@ app.controller("ProductContoller",function($scope,$http,ajax,$location,$routePar
 
   
 });
+
+app.controller("EditProduct",function($scope,$http,ajax,$location,$routeParams){
+
+    
+  var id= $routeParams.id;
+  ajax.get(API_ROOT+"api/Product/"+id+"/Details",
+    
+  function (response){
+    $scope.product=response.data;
+  },
+  function (error){
+
+  }
+  );
+  
+  ajax.get(API_ROOT+"api/Category/GetAll",
+  
+  function (response){
+    $scope.categories=response.data;
+  },
+  function (error){
+
+  }
+  );
+
+
+   // Edit Product
+   $scope.updateproduct = function (){
+
+    ajax.post(API_ROOT+"api/Product/Edit",$scope.product,
+      
+    function (response){
+      $location.path("/products");
+    },
+    function (error){
+
+    });
+
+   }
+
+
+
+
+
+});
+

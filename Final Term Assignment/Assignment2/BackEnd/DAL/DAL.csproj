@@ -54,41 +54,55 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Category.cs">
-      <DependentUpon>IMS.tt</DependentUpon>
+      <DependentUpon>IMSOrder.tt</DependentUpon>
     </Compile>
     <Compile Include="CategoryRepo.cs" />
-    <Compile Include="IMS.Context.cs">
+    <Compile Include="IMSOrder.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>IMS.Context.tt</DependentUpon>
+      <DependentUpon>IMSOrder.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="IMS.cs">
+    <Compile Include="IMSOrder.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>IMS.tt</DependentUpon>
+      <DependentUpon>IMSOrder.tt</DependentUpon>
     </Compile>
-    <Compile Include="IMS.Designer.cs">
+    <Compile Include="IMSOrder.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>IMS.edmx</DependentUpon>
+      <DependentUpon>IMSOrder.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Order.cs">
+      <DependentUpon>IMSOrder.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderDetail.cs">
+      <DependentUpon>IMSOrder.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderRepo.cs" />
+    <Compile Include="OrderStatus.cs">
+      <DependentUpon>IMSOrder.tt</DependentUpon>
+    </Compile>
+    <Compile Include="OrderStatusRapo.cs" />
     <Compile Include="Product.cs">
-      <DependentUpon>IMS.tt</DependentUpon>
+      <DependentUpon>IMSOrder.tt</DependentUpon>
     </Compile>
     <Compile Include="ProductRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sysdiagram.cs">
-      <DependentUpon>IMS.tt</DependentUpon>
+      <DependentUpon>IMSOrder.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs">
+      <DependentUpon>IMSOrder.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="IMS.edmx">
+    <EntityDeploy Include="IMSOrder.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>IMS.Designer.cs</LastGenOutput>
+      <LastGenOutput>IMSOrder.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="IMS.edmx.diagram">
-      <DependentUpon>IMS.edmx</DependentUpon>
+    <None Include="IMSOrder.edmx.diagram">
+      <DependentUpon>IMSOrder.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -96,15 +110,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="IMS.Context.tt">
+    <Content Include="IMSOrder.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>IMS.edmx</DependentUpon>
-      <LastGenOutput>IMS.Context.cs</LastGenOutput>
+      <DependentUpon>IMSOrder.edmx</DependentUpon>
+      <LastGenOutput>IMSOrder.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="IMS.tt">
+    <Content Include="IMSOrder.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>IMS.edmx</DependentUpon>
-      <LastGenOutput>IMS.cs</LastGenOutput>
+      <DependentUpon>IMSOrder.edmx</DependentUpon>
+      <LastGenOutput>IMSOrder.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

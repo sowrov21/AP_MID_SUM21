@@ -1,0 +1,75 @@
+
+<div class="container-fluid">
+	<div class="row bg-title">
+		<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+			<h4 class="page-title">Orders Details</h4>
+		</div>
+		<div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+			<ol class="breadcrumb">
+				<li><a href="#">Dashboard</a></li>
+				<li class="active">Orders Details</li>
+			</ol>
+		</div>
+		<!-- /.col-lg-12 -->
+	</div>
+	<div>
+		<h2>Order Id: {{order.Id}}</h2>
+		<h2>Status: {{order.OrderStatusName}}</h2>
+		<h2>Date: {{order.OrderDate}}</h2>
+	</div>
+
+	<!-- /row -->
+	<div class="center pull-left">
+		<a href="#!" class="btn btn-danger btn-block waves-effect waves-light"
+			>Add Orders</a
+		>
+		<br /><br /><br />
+	</div>
+	<div class="center pull-right app-search hidden-sm hidden-xs m-r-10">
+		<input type="text" placeholder="Search..." class="form-control" />
+		<a href="">
+			<i class="fa fa-search"></i>
+		</a>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">
+			<div class="white-box">
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>#</th>
+								<th>Product</th>
+								<th>Quantity</th>
+								<th>Price</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="o in order.OrderDetails">
+								<td>{{$index}}</td>
+								<td>{{o.ProductName}}</td>
+								<td>{{o.Quantity}}</td>
+								<td>{{o.ProductPrice}}</td>
+							</tr>
+
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>Delivery Charge: {{50}}</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td>Total: {{total}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.row -->
+</div>
+<!-- /.container-fluid -->

@@ -25,6 +25,13 @@ namespace _4_Tier_InventoryManagementSystem.Controllers
             ProductService.AddProduct(pm);
         }
 
+        [Route("api/Product/Edit")]
+        [HttpPost]
+        public void Edit(ProductModel pm)
+        {
+            ProductService.EditProduct(pm);
+        }
+
         [Route("api/Product/{id}/Details")]
         [HttpGet]
         public ProductModel GetProductDetails(int id)

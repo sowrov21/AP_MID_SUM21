@@ -46,6 +46,12 @@ namespace BLL
             var mData = AutoMapper.Mapper.Map<ProductModel, Product>(pm);
             ProductRepo.AddProduct(mData);
         }
+
+        public static void EditProduct(ProductModel pm)
+        {
+            var mData = AutoMapper.Mapper.Map<ProductModel, Product>(pm);
+            ProductRepo.EditProduct(mData);
+        }
         public static ProductModel GetProductDetails(int id)
         {
             var data = ProductRepo.GetProductDetails(id);

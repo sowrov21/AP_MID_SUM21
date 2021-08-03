@@ -8,11 +8,11 @@ namespace DAL
 {
    public class ProductRepo
     {
-        static IMSEntities context;
+        static IMSOrderEntities context;
         static ProductRepo()
         {
 
-            context = new IMSEntities();
+            context = new IMSOrderEntities();
         }
 
         public static List<Product> GetProducts()
@@ -25,6 +25,14 @@ namespace DAL
             context.Products.Add(p);
             context.SaveChanges();
         }
+
+        public static void EditProduct(Product p)
+        {
+            var old_p = context.Products.FirstOrDefault(pr => pr.Id == p.Id);
+            context.Entry(old_p).CurrentValues.SetValues(p);
+            context.SaveChanges();
+        }
+
 
         public static Product GetProductDetails(int id)
         {

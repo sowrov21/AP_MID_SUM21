@@ -22,11 +22,19 @@ app.config([
 			})
 			.when("/productedit/:id", {
 				templateUrl: "views/pages/editproduct.html",
-				controller: "ProductContoller",
+				controller: "EditProduct",
 			})
 			.when("/categories", {
 				templateUrl: "views/pages/categories.html",
 				controller: "CategoryController",
+			})
+			.when("/orders", {
+				templateUrl: "views/pages/orders.html",
+				controller: "GetAllOrder",
+			})
+			.when("/orderdetail/:id", {
+				templateUrl: "views/pages/orderdetails.html",
+				controller: "GetOrderDetails",
 			})
 			.when("/addcategory", {
 				templateUrl: "views/pages/addcategory.html",
